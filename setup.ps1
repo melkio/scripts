@@ -1,4 +1,6 @@
-$toolsPath = Join-Path . -ChildPath "tools"
+param([Parameter(Position = 0, Mandatory = 1)][string]$baseDirectory)
+
+$toolsPath = Join-Path $baseDirectory -ChildPath "tools"
 $toolsExists = Test-Path $toolsPath
 If ($toolsExists -eq $true) {
     Remove-Item $toolsPath -Force -Recurse
