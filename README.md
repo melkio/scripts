@@ -1,2 +1,2 @@
 # scripts
-Scripts useful for dayly work
+Useful scripts for my dayly work
