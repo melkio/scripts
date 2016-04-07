@@ -1,8 +1,4 @@
-param([Parameter(Position = 0, Mandatory = 0)][string]$baseDirectory)
-
-if ($baseDirectory -eq $null) {
-    $baseDirecotry = "."
-}
+param([Parameter(Position = 0, Mandatory = 0)][string]$baseDirectory = ".")
 
 $toolsPath = Join-Path $baseDirectory -ChildPath "tools"
 $toolsExists = Test-Path $toolsPath
