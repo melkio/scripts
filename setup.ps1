@@ -10,7 +10,7 @@ $nugetPath = Join-Path $toolsPath -ChildPath "nuget"
 New-Item $nugetPath -Type directory
 $nuget = Join-Path $nugetPath -ChildPath "nuget.exe"
 Invoke-WebRequest "https://www.nuget.org/nuget.exe" -OutFile $nuget
-&$nuget update -self
+#&$nuget update -self
 
 &$nuget install psake -OutputDirectory $toolsPath -ExcludeVersion
 &$nuget install nunit.console -OutputDirectory $toolsPath -ExcludeVersion
