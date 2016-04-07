@@ -25,4 +25,7 @@ EndGlobal`n"
 $setupScript = Join-Path $projectPath -ChildPath "setup.ps1"
 Invoke-WebRequest "https://raw.githubusercontent.com/melkio/scripts/master/setup.ps1" -OutFile $setupScript
 
+$buildScript = Join-Path $projectPath -ChildPath "default.ps1"
+Invoke-WebRequest "https://raw.githubusercontent.com/melkio/scripts/master/default.ps1" -OutFile $buildScript
+
 &$setupScript -baseDirectory $projectPath
